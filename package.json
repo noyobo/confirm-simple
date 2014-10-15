@@ -1,0 +1,29 @@
+{
+  "name": "confirm-simple",
+  "version": "1.0.0",
+  "description": "A simple command-line tool to confirm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noyobo/confirm-simple.git"
+  },
+  "keywords": [
+    "confirm",
+    "cli",
+    "confirm-cli",
+    "simple",
+    "prompt"
+  ],
+  "author": "noyobo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noyobo/confirm-simple/issues"
+  },
+  "homepage": "https://github.com/noyobo/confirm-simple",
+  "dependencies": {
+    "colors": "^1.0.3"
+  }
+}
