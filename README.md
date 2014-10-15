@@ -22,7 +22,7 @@ confirm(message, [chose,] callback)
 ## Example
 
 ```javascript
-var confirm = require('example')
+var confirm = require('confirm-simple')
 
 confirm('how are you?', function(ok){
     if(ok){ // ok is boolean
@@ -33,7 +33,7 @@ confirm('how are you?', function(ok){
 ```
 
 ```javascript
-var confirm = require('example')
+var confirm = require('confirm-simple')
 
 confirm('how are you?', ['ok', 'cancel'] ,function(ok){
     if(ok){ // ok is boolean
