@@ -15,14 +15,14 @@ $ npm install --save confirm-simple
 
 ## Api
 
-```
+```javascript
 confirm(message, [chose,] callback)
 ```
 
 ## Example
 
-```
-var confirm = require('example')
+```javascript
+var confirm = require('confirm-simple')
 
 confirm('how are you?', function(ok){
     if(ok){ // ok is boolean
@@ -32,8 +32,8 @@ confirm('how are you?', function(ok){
 
 ```
 
-```
-var confirm = require('example')
+```javascript
+var confirm = require('confirm-simple')
 
 confirm('how are you?', ['ok', 'cancel'] ,function(ok){
     if(ok){ // ok is boolean
