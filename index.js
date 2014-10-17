@@ -1,5 +1,6 @@
 'use strict';
 var colors = require('colors')
+var util = require('util')
 
 module.exports = function(message, chose, callback) {
   if (!message) {
@@ -8,11 +9,13 @@ module.exports = function(message, chose, callback) {
   if (!chose && !callback) {
     throw new Error('callback required!')
   };
-  if (typeof chose === 'function') {
+  if (typeof callback === 'undefined') {
     callback = chose;
-    chose = ['yes', 'no']
+    chose = ['yes', 'no'];
   };
-
+  if (!util.isArray(chose) || (chose && chose.length !== 2)) {
+    throw new Error('chose is not a right array')
+  };
   process.stdin.setEncoding('utf8');
   process.stdin.resume();
   var answer = '';
@@ -25,8 +28,9 @@ module.exports = function(message, chose, callback) {
     var ok = data.trim() === chose[0];
     try {
       callback(ok);
-    }catch(e){
-        throw new Error(e);
+    } catch (e) {
+      console.log(e)
+      throw new Error(e);
     }
     process.stdin.pause();
   })
