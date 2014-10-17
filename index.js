@@ -1,5 +1,5 @@
 'use strict';
-var colors = require('colors')
+var colors = require('./lib/colors')
 var util = require('util')
 
 module.exports = function(message, chose, callback) {
@@ -19,9 +19,10 @@ module.exports = function(message, chose, callback) {
   process.stdin.setEncoding('utf8');
   process.stdin.resume();
   var answer = '';
-  var msg = ['?'.red];
-  msg.push(message.grey);
-  msg.push(('<' + chose.join('|') + '>').yellow + ' : ');
+  var ask = colors.red('?');
+  var msg = [ask];
+  msg.push(colors.grey(message));
+  msg.push(colors.yellow('<' + chose.join('|') + '>') + ' : ');
 
   process.stdout.write(msg.join(' '));
   process.stdin.once('data', function(data) {

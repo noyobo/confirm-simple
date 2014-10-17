@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "engines":{
+  "engines": {
     "node": ">=0.8"
   },
   "repository": {
@@ -26,9 +26,7 @@
     "url": "https://github.com/noyobo/confirm-simple/issues"
   },
   "homepage": "https://github.com/noyobo/confirm-simple",
-  "dependencies": {
-    "colors": "^1.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^1.9.2",
     "mocha": "^1.21.5",
