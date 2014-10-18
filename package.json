@@ -1,8 +1,11 @@
 {
   "name": "confirm-simple",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple command-line tool to confirm",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "mocha"
   },
@@ -26,10 +29,12 @@
     "url": "https://github.com/noyobo/confirm-simple/issues"
   },
   "homepage": "https://github.com/noyobo/confirm-simple",
-  "dependencies": {},
   "devDependencies": {
     "chai": "^1.9.2",
     "mocha": "^1.21.5",
     "q": "^1.0.1"
+  },
+  "dependencies": {
+    "colors-mini": "^1.0.2"
   }
 }

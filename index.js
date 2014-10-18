@@ -1,5 +1,5 @@
 'use strict';
-var colors = require('./lib/colors')
+var colors = require('colors-mini')
 var util = require('util')
 
 module.exports = function(message, chose, callback) {
