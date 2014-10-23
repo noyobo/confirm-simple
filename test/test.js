@@ -1,4 +1,4 @@
-var confirm = require('../index.js');
+var confirm = require('../lib/index.js');
 var expect = require('chai').expect;
 var Q = require('q')
 describe('confirm testing', function() {
@@ -65,6 +65,34 @@ describe('confirm testing', function() {
           ok = ask
         })
         process.stdin.emit('data', 'nn');
+        return ok;
+      })
+      .then(function(ok) {
+        expect(ok).to.be.false;
+      });
+  });
+  it('callback undefined', function() {
+    var ok = null
+    return Q(ok)
+      .then(function(ok) {
+        confirm('haha', function(ask){
+          ok = ask
+        })
+        process.stdin.emit('data', 'yes');
+        return ok;
+      })
+      .then(function(ok) {
+        expect(ok).to.be.true;
+      });
+  });
+  it('callback undefined', function() {
+    var ok = null
+    return Q(ok)
+      .then(function(ok) {
+        confirm('haha', function(ask){
+          ok = ask
+        })
+        process.stdin.emit('data', 'no');
         return ok;
       })
       .then(function(ok) {
