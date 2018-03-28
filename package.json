@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/noyobo/confirm-simple",
   "devDependencies": {
-    "chai": "^1.9.2",
-    "mocha": "^1.21.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
     "q": "^1.0.1"
   },
   "dependencies": {
